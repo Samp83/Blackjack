@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Game(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=50)
     turn = models.IntegerField(default=0)
     ended = models.BooleanField(default=False)
 
