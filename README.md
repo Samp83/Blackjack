@@ -4,12 +4,11 @@
 1. [Description](#description)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
 
 # Description
 ***
 Jeu de Blackjack simplifié en utilisant uniquement des dés avec 4 joueurs.
+Projet réalisé par: Sami, Cassandra et Owen.
 
 # Technologies
 ***
@@ -28,4 +27,23 @@ En prenant au moins, une version utilisant Python 3.11 ou plus et en utilisant d
 conda create -n <env_name>
 conda activate <env_name>
 ```
-Puis nous installons 
+Puis nous installons Django:
+```
+pip  install django          
+pip  install django-ninja
+
+ # alternative
+py -m pip  install django          
+py -m pip  install django-ninja
+```
+Consernant le **Frontend**, vérifier si vous avec bien [Node](https://nodejs.org/fr), 
+ici nous allons l'utiliser conjointement avec [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating),
+un gestionnaire de pour les différentes versions de Node.js possibles. ***/!\ Choisisez la version adaptée à votre système d'exploitation.*** 
+```
+nvm list
+nvm use X.X.X
+```
+Pour lancer le **Front**
+```
+npm run dev
+```
