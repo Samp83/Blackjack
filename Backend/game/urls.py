@@ -36,7 +36,7 @@ def start_game(request, data: StartGameRequest):
     game = Game.objects.create(name=data.game_name)
     for name in data.players:
         Player.objects.create(name=name, game=game, score=0, rolls=0)
-    game.refresh_from_db()  # Refresh to include players in response
+    game.refresh_from_db()  
     return game
 
 
