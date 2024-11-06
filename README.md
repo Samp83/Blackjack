@@ -61,3 +61,4 @@ python manage.py runserver
 # Repartition
 ***
 Sami c'est principalement occupé du back, Owen du front et moi j'ai aidé des 2 côtés.
+Due à certains soucis la pluspart de nos commits on était fais par Sami.
