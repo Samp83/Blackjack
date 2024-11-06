@@ -53,13 +53,13 @@ def play_game(request, game_id: int, data: PlayGameRequest):
     current_player = players[current_player_index]
 
 
-    if data.action == "roll" and current_player.rolls < 3:
+    if data.action == "roll":
         roll_sum = sum(random.randint(1, 6) for _ in range(data.diceCount))
         current_player.score += roll_sum
         current_player.rolls += 1
         current_player.save()
 
-        if current_player.score >= 21 or current_player.rolls == 3:
+        if current_player.score >= 21:
             if current_player.score == 21:
                 winners.append(current_player.name)
             game.turn += 1  
