@@ -1,5 +1,6 @@
 from ninja import NinjaAPI, ModelSchema, Schema
 from game.models import Game, Player
+from django.db import IntegrityError
 
 api = NinjaAPI()
 
