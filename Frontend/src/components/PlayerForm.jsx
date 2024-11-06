@@ -2,14 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-function PlayerForm({ setPlayers, setDiceCount }) {
+function PlayerForm({ setPlayers }) {
   const [playerNames, setPlayerNames] = useState(["", "", "", ""]);
-  const [dice, setDice] = useState(1);
   const navigate = useNavigate();
 
   const startGame = () => {
     setPlayers(playerNames.map((name, index) => ({ id: index, name, score: 0, rolls: 0 })));
-    setDiceCount(dice);
     navigate('/game');
   };
 
@@ -19,8 +17,6 @@ function PlayerForm({ setPlayers, setDiceCount }) {
         <thead>
         <tr>  
             <h1>Black Jack</h1>
-            <label>Number of Dice:</label>
-            <input type="number" min="1" max="3" value={dice} onChange={(e) => setDice(parseInt(e.target.value))} />
         </tr>
         </thead> 
 
