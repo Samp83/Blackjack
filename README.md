@@ -4,6 +4,8 @@
 1. [Description](#description)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
+4. [Lancement](#lancement)
+5. [Repartition](#repartition)
 
 # Description
 ***
@@ -43,7 +45,19 @@ un gestionnaire de pour les différentes versions de Node.js possibles. ***/!\ C
 nvm list
 nvm use X.X.X
 ```
+# Lancement
+***
 Pour lancer le **Front**
 ```
+cd Frontend
 npm run dev
 ```
+Pour lancer le **Back**
+```
+cd backend
+python manage.py migrate
+python manage.py runserver
+```
+# Repartition
+***
+Sami c'est principalement occupé du back, Owen du front et moi j'ai aidé des 2 côtés.
